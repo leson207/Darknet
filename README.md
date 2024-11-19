@@ -113,3 +113,5 @@ If deploy:
 ![FasstAPI](asset/fastapi.png)
 ![Prometheus](asset/prometheus.png)
 ![Grafana](asset/grafana.png)
+# Resource
+- https://courses.mlops.vn/
