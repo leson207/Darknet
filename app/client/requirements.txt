@@ -1,0 +1,5 @@
+numpy
+pillow
+bentoml
+fastapi[standard]
+py-grpc-prometheus

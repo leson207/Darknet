@@ -1,0 +1,72 @@
+stages: 
+  ingestion:
+    cmd: python3 -m src.pipeline.ingestion
+    deps:
+      - src/pipeline/ingestion.py
+      - src/component/DataIngestor.py
+    params:
+      - data_ingestor_config
+    outs:
+      - artifacts/data
+  
+  transformation:
+    cmd: python3 -m src.pipeline.transformation
+    deps:
+      - src/pipeline/transformation.py
+      - src/component/Preprocessor.py
+    params:
+      - IMAGE_SIZE
+      - preprocessor_config
+    outs:
+      - artifacts/preprocessor/train_transform.pkl
+      - artifacts/preprocessor/test_transform.pkl
+  
+  training:
+    cmd: python3 -m src.pipeline.training
+    deps:
+      - src/pipeline/training.py
+      - src/component/DataModule.py
+      - src/component/Criterion.py
+      - src/component/Model.py
+      - src/component/Metric.py
+      - src/component/mAP.py
+      - src/component/Trainer.py
+      - artifacts/data
+      - artifacts/preprocessor/train_transform.pkl
+      - artifacts/preprocessor/test_transform.pkl
+    params:
+      - IMAGE_SIZE
+      - ANCHORS
+      - data_module_config
+      - loss_config
+      - model_config
+      - map_config
+      - training_config
+      - trainer_config
+    outs:
+      - artifacts/model/model.pt
+      - artifacts/model/model_scripted.pt
+  
+  evaluation:
+    cmd: python3 -m src.pipeline.evaluation
+    deps:
+      - src/pipeline/evaluation.py
+      - src/component/mAP.py
+      - artifacts/model/model.pt
+    params:
+      - IMAGE_SIZE
+      - ANCHORS
+      - data_module_config
+      - loss_config
+      - map_config
+      - evaluator_config
+  
+  prediction:
+    cmd: python3 -m src.pipeline.prediction
+    deps:
+      - src/component/Predictor.py
+      - src/pipeline/prediction.py
+      - artifacts/model/model.pt
+    params:
+      - ANCHORS
+      - predictor_config

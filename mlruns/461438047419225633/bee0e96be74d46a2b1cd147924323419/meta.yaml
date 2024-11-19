@@ -1,0 +1,15 @@
+artifact_uri: file:///home/leson207/vscode/darknet/mlruns/461438047419225633/bee0e96be74d46a2b1cd147924323419/artifacts
+end_time: 1732005058828
+entry_point_name: ''
+experiment_id: '461438047419225633'
+lifecycle_stage: active
+run_id: bee0e96be74d46a2b1cd147924323419
+run_name: zealous-stork-155
+run_uuid: bee0e96be74d46a2b1cd147924323419
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732005051871
+status: 4
+tags: []
+user_id: leson207

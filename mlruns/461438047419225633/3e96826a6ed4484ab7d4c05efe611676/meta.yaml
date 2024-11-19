@@ -1,0 +1,15 @@
+artifact_uri: file:///home/leson207/vscode/darknet/mlruns/461438047419225633/3e96826a6ed4484ab7d4c05efe611676/artifacts
+end_time: 1732000682176
+entry_point_name: ''
+experiment_id: '461438047419225633'
+lifecycle_stage: active
+run_id: 3e96826a6ed4484ab7d4c05efe611676
+run_name: unruly-hen-704
+run_uuid: 3e96826a6ed4484ab7d4c05efe611676
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732000667777
+status: 3
+tags: []
+user_id: leson207

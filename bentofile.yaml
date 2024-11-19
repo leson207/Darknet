@@ -1,0 +1,22 @@
+service: 'app.server.service:svc'
+labels:
+  owner: leson207
+  project: object_detection
+include:
+  - 'app/server'
+  - 'src'
+  - 'params.yaml'
+  - 'artifacts/preprocessor/test_transform.pkl'
+  - 'artifacts/data/id_to_label.json'
+python:
+  packages:
+    - python-box
+    - joblib
+    - numpy
+    - pillow
+    - torch
+    - torchvision
+    - einops
+    - albumentations
+  extra_index_url:
+    - https://download.pytorch.org/whl/cpu

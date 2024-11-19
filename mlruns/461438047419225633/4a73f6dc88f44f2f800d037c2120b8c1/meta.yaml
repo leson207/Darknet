@@ -1,0 +1,15 @@
+artifact_uri: file:///home/leson207/vscode/darknet/mlruns/461438047419225633/4a73f6dc88f44f2f800d037c2120b8c1/artifacts
+end_time: 1732005110704
+entry_point_name: ''
+experiment_id: '461438047419225633'
+lifecycle_stage: active
+run_id: 4a73f6dc88f44f2f800d037c2120b8c1
+run_name: skittish-duck-661
+run_uuid: 4a73f6dc88f44f2f800d037c2120b8c1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732005096856
+status: 3
+tags: []
+user_id: leson207
