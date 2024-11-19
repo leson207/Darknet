@@ -21,7 +21,7 @@ An application for detect object in an image. It is ready to be deployed to AWS 
 - Node-exported: 9100
 
 # Usage
-Below is command for each component
+Below is common command for each component.
 ## Anaconda
 ```bash
 conda create -n pytorch -y
